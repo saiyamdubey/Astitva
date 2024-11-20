@@ -27,7 +27,7 @@ const PetShops = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#0a1324] text-white w-full flex px-20 gap-5">
+    <div className="min-h-screen bg-[#0a1324] text-white w-full flex py-10 gap-5">
       {/* Sidebar */}
       <div className="w-1/4 bg-teal-700 p-4 flex flex-col space-y-4 text-white rounded-lg h-[85vh] overflow-hidden">
         <h2 className="text-3xl font-bold">Categories</h2>
