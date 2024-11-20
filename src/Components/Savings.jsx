@@ -1,6 +1,43 @@
 import { Compare } from "../Components/ui/compare";
 import React from "react";
-import { saving } from "./Common";
+// import { saving } from "./Common";
+import bhuribefore from '../assets/before.jpg'
+import bhuriafter from '../assets/after.jpg'
+import treatmentvideo from '../assets/video.mp4'
+import mouse1 from '../assets/mouse1.png'
+import mouse2 from '../assets/mouse2.png'
+import cow from '../assets/cow.webp'
+import cow1 from '../assets/cow1.webp'
+
+const saving = [
+  {
+      name: "King ",
+      before: mouse2,
+      before_text: "We got a call from a wise man told that she is lost and injured",
+      treatment: treatmentvideo,
+      treatment_text: "We provided basics medics like painkiller, Antibiotics, etc and helped her to relocate",
+      after: mouse1,
+      after_text: "This is the after treatment condition of bhuri now with her family and healthy"
+  },
+  {
+      name: "Billo",
+      before:cow1,
+      before_text: "We got a call from a wise man told that she is lost and injured",
+      treatment: treatmentvideo,
+      treatment_text: "We provided basics medics like painkiller, Antibiotics, etc and helped her to relocate",
+      after: cow,
+      after_text: "This is the after treatment condition of bhuri now with her family and healthy"
+  },
+  {
+      name: "Sheru",
+      before: bhuribefore,
+      before_text: "We got a call from a wise man told that she is lost and injured",
+      treatment: treatmentvideo,
+      treatment_text: "We provided basics medics like painkiller, Antibiotics, etc and helped her to relocate",
+      after: bhuriafter,
+      after_text: "This is the after treatment condition of bhuri now with her family and healthy"
+  }
+]
 
 const Savings = () => {
   return (
