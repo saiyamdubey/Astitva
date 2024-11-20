@@ -67,7 +67,7 @@ const Shelters = () => {
 
 
       {/* Shelter List */}
-      <div className="flex flex-col gap-6 px-40 ">
+      <div className="flex flex-col gap-6 px-32 ">
         {shelters.length > 0 ? (
           shelters.map((shelter, index) => (
             <div
@@ -80,28 +80,28 @@ const Shelters = () => {
                   <img
                     src={shelter.src}
                     alt="Shelter Logo"
-                    className="w-[15rem] h-[15rem] object-cover rounded-full"
+                    className="w-[12rem] h-[12rem] object-cover rounded-full"
                   />
                 </div>
 
                 {/* Shelter Details in the middle */}
                 <div className="flex flex-col justify-center w-[40%]  ml-[5rem]">
-                  <h1 className="text-3xl font-bold text-teal-400 mb-2">
+                  <h1 className="text-2xl font-bold text-teal-400 mb-2">
                     {shelter.shelter_name}
                   </h1>
-                  <p className="text-xl text-gray-200">
+                  <p className="text-lg text-gray-200">
                     <strong>Location:</strong> {shelter.location}
                   </p>
-                  <p className="text-xl text-gray-200">
+                  <p className="text-lg text-gray-200">
                     <strong>Contact:</strong> {shelter.contact}
                   </p>
-                  <p className="text-xl text-gray-200">
+                  <p className="text-lg text-gray-200">
                     <strong>Status:</strong> {shelter.active_inactive}
                   </p>
-                  <p className="text-xl text-gray-200">
+                  <p className="text-lg text-gray-200">
                     <strong>Ratings:</strong> {shelter.ratings}/5
                   </p>
-                  <p className="text-xl flex-wrap text-gray-100 italic mt-2">
+                  <p className="text-lg flex-wrap text-gray-100 italic mt-2">
                     "{shelter.slogan}"
                   </p>
                 </div>
@@ -109,7 +109,7 @@ const Shelters = () => {
                 {/* Map iframe on the right */}
                 <div className="flex-shrink-0 ">
                   <iframe  
-                  className="w-[33rem] h-[15rem] ml-2 rounded-lg"                 
+                  className="w-[30rem] h-[15rem] ml-2 rounded-lg"                 
                     title="Google Map"
                     width="100%"
                     height="100%"
