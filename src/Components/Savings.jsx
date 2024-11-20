@@ -1,6 +1,6 @@
 import { Compare } from "../Components/ui/compare";
 import React from "react";
-import { saving } from "../constant/Common";
+import { saving } from "./Common";
 
 const Savings = () => {
   return (
