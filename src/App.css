@@ -1,0 +1,14 @@
+
+body::selection {
+    color: #ffffff;
+    background-color: black; 
+  }
+
+  body {
+    overflow: auto;
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
