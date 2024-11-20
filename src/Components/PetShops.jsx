@@ -27,7 +27,7 @@ const PetShops = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#0a1324] text-white flex px-20 py-10 gap-10">
+    <div className="min-h-screen bg-[#0a1324] text-white w-full flex px-20 py-10 gap-5">
       {/* Sidebar */}
       <div className="w-1/4 bg-teal-700 p-4 flex flex-col space-y-4 text-white rounded-lg h-[85vh] overflow-hidden">
         <h2 className="text-3xl font-bold">Categories</h2>
@@ -72,7 +72,7 @@ const PetShops = () => {
         </div>
 
         {/* Pet Shop Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
           {filteredShops.length > 0 ? (
             filteredShops.map((shop, index) => (
               <div
