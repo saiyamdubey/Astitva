@@ -27,9 +27,9 @@ const PetShops = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#0a1324] text-white w-full flex py-10 gap-5">
+    <div className="min-h-screen w-full bg-[#0a1324] text-white flex py-10  gap-5">
       {/* Sidebar */}
-      <div className="w-1/4 bg-teal-700 p-4 flex flex-col space-y-4 text-white rounded-lg h-[85vh] overflow-hidden">
+      <div className="w-[25%] bg-teal-700 p-4 flex flex-col space-y-4 text-white rounded-lg h-[85vh] overflow-hidden">
         <h2 className="text-3xl font-bold">Categories</h2>
         {[
           "",
@@ -79,12 +79,12 @@ const PetShops = () => {
                 key={index}
                 className="bg-black border rounded-3xl shadow-md hover:shadow-lg transition duration-200 p-6"
               >
-                <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex flex-col md:flex-row items-center gap-4">
                   {/* Image */}
                   <img
                     src={shop.image}
                     alt={shop.name}
-                    className="w-[15rem] h-[15rem] object-cover rounded-full"
+                    className="w-[10rem] h-[10rem] object-cover rounded-full"
                   />
 
                   {/* Details */}
