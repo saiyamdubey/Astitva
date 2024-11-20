@@ -32,9 +32,9 @@ const Shelters = () => {
       try {
         const res = debouncedSearch
           ? await axios.get(
-              `http://localhost:8000/register/search?location=${debouncedSearch}`
+              `https://astitva-backend.onrender.com/register/search?location=${debouncedSearch}`
             )
-          : await axios.get("http://localhost:8000/register/all");
+          : await axios.get("https://astitva-backend.onrender.com/register/all");
         console.log("API Response:", res.data);
         setShelters(res.data);
       } catch (error) {

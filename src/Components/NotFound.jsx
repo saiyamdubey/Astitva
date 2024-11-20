@@ -20,20 +20,7 @@ const NotFound = () => {
 
                 {/* Lower Section */}
                 <div className="mt-6 space-y-6">
-                    {/* Logo and Name */}
-                    {/* <div className="flex items-center justify-center space-x-4">
-                        <img
-                            src="http://localhost:5173/src/assets/logo1.png"
-                            alt="YouTube Logo"
-                            className="w-16 h-16"
-                        />
-                        <h2 className="text-2xl text-gray-900 font-extrabold flex items-center">
-                            Astitva
-                            <sup className="ml-2 text-gray-500 text-sm font-light tracking-wide">
-                                IN
-                            </sup>
-                        </h2>
-                    </div> */}
+                    
 
                     
                 </div>

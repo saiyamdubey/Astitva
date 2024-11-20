@@ -19,7 +19,7 @@ const AddShelterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/register/add', formData);
+      const response = await axios.post('https://astitva-backend.onrender.com/register/add', formData);
       alert('Shelter added successfully!');
       console.log(response.data);
       setFormData({

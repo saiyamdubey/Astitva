@@ -22,7 +22,7 @@ const ItemVolunteerForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/itemdonate",
+        "https://astitva-backend.onrender.com/api/itemdonate",
         formData
       );
       alert("Volunteer information submitted successfully!");
