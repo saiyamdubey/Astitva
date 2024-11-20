@@ -49,7 +49,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="hidden lg:flex list-none">
-            <ul className="flex text-xl gap-10">
+            <ul className="flex text-xl gap-5">
               <li>
                 <Link
                   to="/"
