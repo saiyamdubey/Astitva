@@ -1,13 +1,13 @@
-
-
-
 import React, { useEffect, useState } from "react";
+import { IoIosCloseCircle } from "react-icons/io";
+
 import axios from "axios";
 
 const PetShops = () => {
   const [petShops, setPetShops] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar initially open on mobile
 
   useEffect(() => {
     axios.get("https://astitva-backend.onrender.com/api/petShops").then((response) => {
@@ -17,6 +17,7 @@ const PetShops = () => {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category === selectedCategory ? "" : category);
+    setIsSidebarOpen(false);
   };
 
   const filteredShops = petShops.filter((shop) => {
@@ -27,10 +28,30 @@ const PetShops = () => {
   });
 
   return (
-    <div className="min-h-screen w-full bg-[#0a1324] text-white flex py-10  gap-5">
-      {/* Sidebar */}
-      <div className="w-[25%] bg-teal-700 p-4 flex flex-col space-y-4 text-white rounded-lg h-[100vh] overflow-hidden">
-        <h2 className="text-3xl font-bold">Categories</h2>
+    <div className="min-h-screen w-full lg:flex text-white lg:flex-row py-10 gap-5 ">
+      <button
+        className={`lg:hidden px-4 py-2 rounded z-50 top-4 ${isSidebarOpen ? "w-1 text-black left-4" : "w-auto bg-teal-600 text-white "
+          }`}
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      >
+        {isSidebarOpen ? "" : "Open Categories"}
+      </button>
+
+
+      <div
+        className={`bg-transparent backdrop-blur-3xl border p-4 flex flex-col space-y-4 text-white rounded-lg transition-transform duration-1000 z-40 ${isSidebarOpen ? "translate-x-0" : "-translate-x-[50rem] "
+          } lg:translate-x-0 lg:w-[25%]`}
+      >
+        <div className="flex flex-row gap-20 text-white ">
+          <h2 className="text-3xl font-bold">Categories</h2>
+          <button
+            className="lg:hidden px-4 py-2 rounded z-50 top-4 right-4"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          >
+            <IoIosCloseCircle  size={32} color="white"/>
+          </button>
+        </div>
+        <hr />
         {[
           "",
           "Medical Supplies",
@@ -40,39 +61,35 @@ const PetShops = () => {
         ].map((category) => (
           <button
             key={category}
-            className={`p-12 mt-10 rounded-lg transition ${
-              selectedCategory === category
-                ? "bg-teal-900"
-                : "bg-teal-600"
-            } hover:bg-teal-800`}
+            className={`p-4 mt-4 rounded-lg transition ${selectedCategory === category ? "bg-teal-900" : "bg-teal-600"
+              } hover:bg-teal-800`}
             onClick={() => handleCategoryClick(category)}
           >
-            {category !== "" ? (category) : ("All Available Shops")} 
+            {category !== "" ? category : "All Available Shops"}
           </button>
         ))}
       </div>
 
+
       {/* Main Content */}
-      <div className="flex-1 flex flex-col gap-10">
+      <div className="flex-1 flex flex-col gap-10 px-4 -mt-96 lg:mt-0">
         {/* Search Bar */}
-        <div className="flex  items-center">
+        <div className="flex flex-wrap gap-2 items-center">
           <h1 className="text-3xl font-bold text-teal-400">Pet Shops</h1>
           <input
             type="text"
             placeholder="Search shops..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="p-2 ml-auto mr-6 rounded-lg border-2 border-teal-400 bg-[#121e34] text-white focus:outline-none focus:ring focus:ring-teal-300"
+            className="flex-grow p-2 rounded-lg border-2 border-teal-400 bg-[#121e34] text-white focus:outline-none focus:ring focus:ring-teal-300"
           />
-          <button
-            className="bg-teal-600 text-white px-6 py-2 rounded hover:bg-teal-800 transition"
-          >
+          <button className="bg-teal-600 text-white px-6 py-2 rounded hover:bg-teal-800 transition">
             Search
           </button>
         </div>
 
         {/* Pet Shop Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredShops.length > 0 ? (
             filteredShops.map((shop, index) => (
               <div

@@ -48,7 +48,7 @@ function App() {
       <Analytics />
       <Router>
         <div className="flex flex-col min-h-screen">
-        <Navbar isLoggedIn={isLoggedIn} />
+          <Navbar isLoggedIn={isLoggedIn} />
           <div className="flex-grow mx-10">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -95,7 +95,7 @@ function App() {
             </Routes>
           </div>
           <Chatbot></Chatbot>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </div>

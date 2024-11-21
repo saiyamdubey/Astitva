@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { toPng } from "html-to-image";
 import jsPDF from "jspdf";
+import ReactToPrint from "react-to-print";
 
 const CertificateGenerator = () => {
+  const componentRef = useRef();
   const [userName, setUserName] = useState("");
   const [userImage, setUserImage] = useState(null);
   const [showCertificate, setShowCertificate] = useState(false);
@@ -79,9 +81,10 @@ const CertificateGenerator = () => {
             style={{
               width: "800px",
               height: "600px",
-              transform: "scale(1)", // Default scale
+              transform: "scale(1)",
               transformOrigin: "top left",
             }}
+            ref={componentRef}
           >
             <h2 className="text-2xl font-bold text-center text-teal-700">
               Certificate of Appreciation
@@ -107,6 +110,18 @@ const CertificateGenerator = () => {
               Issued on: {new Date().toLocaleDateString()}
             </p>
           </div>
+
+          <ReactToPrint
+            trigger={() => (
+              <button
+                className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
+              >
+                Download
+              </button>
+            )}
+            content={() => componentRef.current}
+          />
+
           <button
             onClick={handleDownload}
             className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 mt-4"
