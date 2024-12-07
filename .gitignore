@@ -1,0 +1,17 @@
+# Logs and temporary files
+*.log
+*.tmp
+*.lock
+dist/
+# OS-specific files
+.DS_Store     # macOS
+Thumbs.db     # Windows
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
