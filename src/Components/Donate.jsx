@@ -9,6 +9,7 @@ const Donate = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: 50000, currency: "INR" }), // Amount in paise (e.g., 50000 = ₹500)
       });
+      
 
       const { id, amount, currency } = await response.json();
       const options = {
