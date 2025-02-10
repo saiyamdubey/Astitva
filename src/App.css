@@ -1,0 +1,76 @@
+body::selection {
+  color: #ffffff;
+  background-color: black;
+}
+
+body {
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.hello::-webkit-scrollbar {
+  display: none; /* Hides scrollbar */
+}
+
+.hello {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer & Edge */
+}
+
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(35deg); }
+  30% { transform: rotate(-35deg); }
+  45% { transform: rotate(28deg); }
+  60% { transform: rotate(-25deg); }
+  75% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-shake {
+  display: inline-block;
+  animation: shake 1s infinite ;
+}
+
+
+@keyframes blink {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.3); }
+  60% { transform: scale(1); }
+  75% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.animate-blink {
+  display: inline-block;
+  animation: blink 1s infinite ;
+}
+
+
+
+
+@keyframes blinkslow {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.3); }
+  60% { transform: scale(1); }
+  75% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.animate-blinkslow {
+  display: inline-block;
+  animation: blinkslow 2s infinite ;
+}
+
+.react-multiple-carousel__arrow--left, .react-multiple-carousel__arrow--right{
+  z-index: 0;
+}

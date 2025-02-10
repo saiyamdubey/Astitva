@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    font-family: "Playwrite GB S";
+    color-scheme: dark;
+  }
+  .hello{
+    font-family: "Playwrite GB S";
+    color-scheme: dark;
+  }
+  
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .bg-gray-50 {
+    background-color: #f9fafb;
+  }
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .transition {
+    transition: all 0.2s ease-in-out;
+  } 
+
+  body::selection {
+    color: #ffffff;
+    background-color: black; 
+  }
+  /* body {
+    overflow: hidden; 
+  } 
+  
+  /* If you want to allow scrolling but hide the scrollbar */
+  body {
+    /* overflow: auto; */
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
