@@ -9,8 +9,10 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { BsCartCheck } from "react-icons/bs";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaFirstAid } from "react-icons/fa";
 import { LiaDonateSolid } from "react-icons/lia";
 import Footer from "./Footer"
+import NeedHelpButton from './Needhelpbtn';
 
 const Sheltermainpage = () => {
     const { id } = useParams();
@@ -69,13 +71,11 @@ const Sheltermainpage = () => {
                         <p className="text-lg"><strong>Contact:</strong> {petShop.contact}</p>
                         <p className="text-lg"><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
                     </div>
+                    
                     <div className="flex justify-evenly">
-                        <a href="mailto:saiyamdubey8787@gmail.com">
-                            <button className="bg-teal-600 text-white flex items-center justify-center gap-2 px-8 py-2 rounded-full shadow-lg hover:bg-teal-800 transition">
-                                <FaPhoneAlt className="text-xl animate-shake" />
-                                Contact Now
-                            </button>
-                        </a>
+
+                        <NeedHelpButton shelteremail="saiyamdubey1@gmail.com" />
+
                         <a
                             href={`https://wa.me/${phoneNumber}`}
                             target="_blank"
@@ -84,6 +84,15 @@ const Sheltermainpage = () => {
                         >
                             <FaWhatsapp className="text-2xl animate-blink" />
                             Chat on WhatsApp
+                        </a>
+
+                    </div>
+                    <div className='flex justify-center w-full'>
+                        <a href="mailto:saiyamdubey8787@gmail.com">
+                            <button className="bg-teal-600 text-white flex items-center justify-center gap-2 px-8 py-2 rounded-full shadow-lg hover:bg-teal-800 transition">
+                                <FaPhoneAlt className="text-xl animate-shake" />
+                                Contact Now
+                            </button>
                         </a>
                     </div>
 
@@ -161,84 +170,6 @@ const Sheltermainpage = () => {
                                 {/* <FaPhoneAlt className="text-xl animate-shake" /> */}
                                 <LiaDonateSolid className="text-2xl animate-blinkslow" />
                                 Donate Here
-                            </button>
-                        </div>
-                    ))}
-                </Carousel>
-            </div>
-
-
-            {/* Manually Added Featured Products */}
-            <div className="mt-10">
-                <h2 className="text-3xl font-bold text-teal-400">Best Products</h2>
-                <Carousel
-                    additionalTransfrom={0}
-                    arrows
-                    autoPlay
-                    autoPlaySpeed={3000}
-                    centerMode={false}
-                    infinite
-                    showDots
-                    responsive={{
-                        desktop: {
-                            breakpoint: { max: 3000, min: 1024 },
-                            items: 4,
-                        },
-                        tablet: {
-                            breakpoint: { max: 1024, min: 464 },
-                            items: 3,
-                        },
-                        mobile: {
-                            breakpoint: { max: 464, min: 0 },
-                            items: 1,
-                        },
-                    }}
-                >
-                    {[{
-                        name: "Dog Food Premium",
-                        price: 500,
-                        stock: 20,
-                        image: "https://m.media-amazon.com/images/I/71wSJ3exA2L._AC_UL320_.jpg"
-                    }, {
-                        name: "Cat Scratching Post",
-                        price: 1200,
-                        stock: 10,
-                        image: "https://m.media-amazon.com/images/I/71lLwJpyH1L._AC_UL320_.jpg"
-                    }, {
-                        name: "Bird Cage",
-                        price: 2500,
-                        stock: 5,
-                        image: "https://m.media-amazon.com/images/I/61xbL41m+jL._AC_UL320_.jpg"
-                    }, {
-                        name: "Bird Cage",
-                        price: 2500,
-                        stock: 5,
-                        image: "https://m.media-amazon.com/images/I/61th7vu+SCL._AC_UL320_.jpg"
-                    }, {
-                        name: "Bird Cage",
-                        price: 2500,
-                        stock: 5,
-                        image: "https://m.media-amazon.com/images/I/81mRZPZSJ8L._AC_UL320_.jpg"
-                    }, {
-                        name: "Bird Cage",
-                        price: 2500,
-                        stock: 5,
-                        image: "https://m.media-amazon.com/images/I/71o84Bphv-L._AC_UL320_.jpg"
-                    }].map((product, index) => (
-                        <div key={index} className="p-10">
-                            <img
-                                src={product.image}
-                                alt={product.name}
-                                className="w-full h-40 object-contain rounded-lg"
-                            />
-                            <h3 className="text-lg font-bold text-white mt-2">{product.name}</h3>
-                            <p className="text-gray-300">Price: ₹{product.price}</p>
-                            <p className="text-gray-300">Stock: {product.stock} left</p>
-                            <p className="text-yellow-400">Rating: ⭐⭐⭐⭐☆</p>
-                            <button className="bg-teal-600 mt-4 text-white flex items-center justify-center gap-2 px-8 py-2 rounded-full shadow-lg hover:bg-teal-800 transition">
-                                {/* <FaPhoneAlt className="text-xl animate-shake" /> */}
-                                <BsCartCheck className="text-2xl animate-blinkslow" />
-                                Add To Bag
                             </button>
                         </div>
                     ))}
@@ -328,7 +259,7 @@ const Sheltermainpage = () => {
 
 
 
-            
+
             {/* Google Map Placeholder */}
             <div className="mt-10 mb-10">
                 <h2 className="text-3xl font-bold text-teal-400">Location</h2>
@@ -345,7 +276,7 @@ const Sheltermainpage = () => {
                     ></iframe>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

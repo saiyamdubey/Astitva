@@ -3,6 +3,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 import axios from "axios";
 import TypewriterLoader from "./TypewriterLoader";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 // import doodle from '../assets/'
 
 const PetShops = () => {
@@ -46,7 +47,7 @@ const PetShops = () => {
   });
 
   return (
-    <div className=" h-[88vh] overflow-hidden w-full lg:flex text-white lg:flex-row py-10 gap-5">
+    <div className=" h-[88vh]  overflow-hidden w-full lg:flex text-white lg:flex-row py-10 gap-5">
       {/* Category Sidebar Button */}
       <button
         className={`lg:hidden px-4 py-2 rounded z-50 top-4 ${isSidebarOpen ? "w-1 text-black left-4" : "w-auto bg-teal-600 text-white"
@@ -58,7 +59,7 @@ const PetShops = () => {
 
       {/* Sidebar - Categories Section */}
       <div
-        className={`hello bg-transparent overflow-scroll max-h-[80vh] backdrop-blur-3xl border p-4 flex flex-col space-y-4 text-white rounded-lg transition-transform duration-1000 z-40 ${isSidebarOpen ? "translate-x-0" : "-translate-x-[50rem]"
+        className={`hello  bg-transparent overflow-scroll max-h-[80vh] backdrop-blur-3xl border p-4 flex flex-col space-y-4 text-white rounded-lg transition-transform duration-1000 z-40 ${isSidebarOpen ? "translate-x-0" : "-translate-x-[50rem]"
           } lg:translate-x-0 lg:w-[25%] fixed top-20 left-0 lg:static`}
       >
         <div className="flex flex-row gap-20 text-white">
@@ -177,7 +178,7 @@ const PetShops = () => {
           }}
         /> */}
       </div>
-
+      {/* <Footer/> */}
     </div >
   );
 };
