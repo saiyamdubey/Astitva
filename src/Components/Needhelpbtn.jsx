@@ -36,7 +36,7 @@ const NeedHelpButton = ({ shelteremail }) => {
                             email: shelteremail,
                         });
 
-                        alert("Location sent successfully!");
+                        // alert("Location sent successfully!");
                     } catch (error) {
                         console.error("Error:", error);
                         alert("Failed to send location. Try again.");
@@ -59,7 +59,7 @@ const NeedHelpButton = ({ shelteremail }) => {
     return (
         <button
             onClick={getLocationAndSendEmail}
-            className="bg-teal-600 text-white flex items-center justify-center gap-2 px-12 py-2 rounded-full shadow-lg hover:bg-teal-800 transition"
+            className="bg-teal-600 text-white flex items-center justify-center gap-2 px-16 py-2 rounded-full shadow-lg hover:bg-teal-800 transition"
             disabled={loading}
         >
             <FaFirstAid className="text-xl animate-blink" />

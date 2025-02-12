@@ -71,10 +71,10 @@ const Sheltermainpage = () => {
                         <p className="text-lg"><strong>Contact:</strong> {petShop.contact}</p>
                         <p className="text-lg"><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
                     </div>
-                    
+
                     <div className="flex justify-evenly">
 
-                        <NeedHelpButton shelteremail="saiyamdubey1@gmail.com" />
+                        <NeedHelpButton shelteremail="madhusudantripathi2004@gmail.com" />
 
                         <a
                             href={`https://wa.me/${phoneNumber}`}
@@ -89,7 +89,7 @@ const Sheltermainpage = () => {
                     </div>
                     <div className='flex justify-center w-full'>
                         <a href="mailto:saiyamdubey8787@gmail.com">
-                            <button className="bg-teal-600 text-white flex items-center justify-center gap-2 px-8 py-2 rounded-full shadow-lg hover:bg-teal-800 transition">
+                            <button className="bg-teal-600 text-white flex items-center justify-center gap-2 px-12 py-2 rounded-full shadow-lg hover:bg-teal-800 transition">
                                 <FaPhoneAlt className="text-xl animate-shake" />
                                 Contact Now
                             </button>

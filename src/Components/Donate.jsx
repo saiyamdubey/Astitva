@@ -5,7 +5,7 @@ import qr from "../assets/QR.jpeg";
 const Donate = () => {
   const handlePayment = async () => {
     try {
-      const response = await fetch("http://localhost:8000/create-order", {
+      const response = await fetch("https://astitva-backend.onrender.com/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: 50000, currency: "INR" }), // Amount in paise (e.g., 50000 = ₹500)
